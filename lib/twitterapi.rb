@@ -11,9 +11,12 @@ class TwitterAPI
 
     @wordScan = wordScanParam
 
+# Key and Secret have been regenerated
+# Token and Token secret have been regenerated 
+
     @client = Twitter::REST::Client.new do |config|
-      config.consumer_key = "qmNuzErOIzwoRaT5RUREOdsCK"
-      config.consumer_secret = "75xDJEJs4hGgOUmUP1ngzPvYGyPcV2TTiSlZvHLIxJibZqgy6a"
+      config.consumer_key = ""
+      config.consumer_secret = ""
       config.access_token = "1692828073-kGSVw9UOREMSEINBugqqnKIzyobszPShiHk8LZi"
       config.access_token_secret = "iXUuKIAhQVUucS93uQyC13MPqjnGvUuLq3E0Jyt1Iqrcb"
     end
