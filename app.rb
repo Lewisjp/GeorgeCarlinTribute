@@ -11,12 +11,16 @@ module GeorgeCarlin
 	  erb :home
   end
 
+  # From form
   post '/user' do
+    params[:screenName]
+    @hi = "#{params[:screenName]}"
+    @userResults = TwitterAPI.new.checkUser("#{params[:screenName]}")
+    erb :user
   end
 
-	get '/user/:userParams' do
-    @userResults = TwitterAPI.new.checkUser(:userParams)
-    erb :user
+	get '/user' do
+    erb :home
 	end
 
   get '/random' do
@@ -25,8 +29,11 @@ module GeorgeCarlin
   end
 
   get '/about' do
-
       erb :bio
+  end
+
+  not_found do
+    erb :notFound404
   end
 
   end
