@@ -1,6 +1,14 @@
-<br><br><br>
-<%= @userResults.inspect %>
-<br><br><br>
-<%= params.inspect %>
-<br><br><br>
-<%= @userResults.inspect %>
+<div id='random'>
+  <h2>
+    <% @userResults.each do |x| %>
+    <%   tweet = x.split(':') %>
+    <div id='Tweet'>
+      <img src='img/twitter.png'>&nbsp;&nbsp;
+      <%=  tweet[0] %>
+      &nbsp;&nbsp;-&nbsp;&nbsp;
+      <%= tweet[1] %>
+    </div>
+    <br>
+    <% end %>
+  </h2>
+</div>

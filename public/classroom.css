@@ -27,6 +27,7 @@ background-image: radial-gradient(ellipse farthest-corner at left top, #000000 0
 
 #main a:link{
   color:white;
+  text-decoration: underline;
 }
 
 #main a:visited {
@@ -57,12 +58,17 @@ background-image: radial-gradient(ellipse farthest-corner at left top, #000000 0
   outline: 0;
 }
 
-input:-webkit-autofill{
-  background-color: transparent;
-  color: white !important;
+#parential {
+  padding: 1%;
+  border: .25em;
+  margin: 3%;
+  float: right;
 }
 
-textarea:-webkit-autofill, select:-webkit-autofill {
-  background-color: transparent;
-  color: white;
+#left {
+  float: left;
+}
+
+#right {
+  position:relative;
 }

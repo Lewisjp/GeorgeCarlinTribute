@@ -1,1 +1,17 @@
-<%= @random %>
+&nbsp;&nbsp;&nbsp;&nbsp;Below are random tweets containing one of George Carlin's 7 dirty words.  Hey, not everyone is a wordsmith ya know...
+
+<div id='random'>
+  <h2>
+    <br>
+    <% @random.each do |x| %>
+    <%   tweet = x.split(':') %>
+    <div id='Tweet'>
+      <img src='img/twitter.png'>&nbsp;&nbsp;
+      <%=  tweet[0] %>
+      &nbsp;&nbsp;-&nbsp;&nbsp;
+      <%= tweet[1] %>
+    </div>
+    <br>
+    <% end %>
+  </h2>
+</div>
