@@ -15,7 +15,10 @@ class TwitterAPI
 # Token and Token secret have been regenerated 
 
     @client = Twitter::REST::Client.new do |config|
-
+      config.consumer_key = ENV['consumerKey']
+      config.consumer_secret = ENV['consumerSecret']
+      config.access_token = ENV['accessToken']
+      config.access_token_secret = ENV['accessTokenSecret']
     end
   end
 
@@ -25,7 +28,7 @@ class TwitterAPI
     end
 
     if checkUser.empty?
-      checkUser << "#{screenName}: User didn't use any of the phrases."
+      checkUser << "#{screenName}: User didn't use any of the 7 Dirty Words."
     end
 
     return checkUser
